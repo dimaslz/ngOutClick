@@ -22,7 +22,7 @@
                 document.addEventListener('click', function() {
                     count = count > -1 ? count + 1 : count;
 
-                    if (!inside && count > 1) {
+                    if (!inside && count > 1) { 
                         count = -1;
                         scope.outClickCallback();
                         scope.$apply();
