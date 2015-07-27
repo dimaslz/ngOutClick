@@ -1,2 +1,6 @@
 # ngOutClick
-Directive to catch click outside an element like onBlur on input
+ngOutClick is a angular plugin for add event onBlur in any tag html.
+
+```js
+<tag ng-out-click>Now, tag have onBlur event</tag>
+```

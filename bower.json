@@ -1,0 +1,14 @@
+{
+  "name": "ng-out-click",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular": "~1.2.x",
+    "angular-mocks": "~1.2.x",
+    "angular-bootstrap": "~0.13.0",
+    "angular-ui-router": "~0.2.x",
+    "bootstrap-sass-official": "~3.3.5",
+    "es5-shim": "~4.1.x",
+    "bootstrap": "~3.3.5"
+  },
+  "dependencies": {}
+}

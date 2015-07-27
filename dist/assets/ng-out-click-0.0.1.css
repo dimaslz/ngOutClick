@@ -1,0 +1,14 @@
+/* Include overrides */
+/* Helper style files */
+/* Include module styles */
+/**
+* Home styles
+*/
+/* line 1, /Users/dimaslz/Documents/vagrant/lemp/www/sites/github/ngOutClick/src/app/home/home.scss */
+h1 {
+  color: red;
+}
+
+/* Include overrides */
+
+/*# sourceMappingURL=../../sass.map */
