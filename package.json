@@ -3,7 +3,11 @@
   "url": "https://github.com/dimaslz/ngOutClick/issues",
   "email": "dimaslopezzurita@gmail.com",
   "name": "ng-out-click",
-  "version": "0.0.1",
+  "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dimaslz/ngOutClick.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -36,7 +40,7 @@
   },
   "scripts": {
     "install": "node node_modules/protractor/bin/webdriver-manager update",
-    "grunt": "npm install grunt grunt-cli",
+    "start": "npm install grunt grunt-cli",
     "bower": "bower install"
   }
 }

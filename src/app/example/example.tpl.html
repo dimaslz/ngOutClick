@@ -1,0 +1,123 @@
+<div class="container">
+  <section id="install">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>How to use</h1>
+        <p>
+          <b>ngOutClick</b> is available on <a href="http://bower.io/search/" target="_blank">Bower</a>, so you can execute the next command:<br>
+        </p>
+        <p>
+          <code>bower install ngOutClick</code>
+        </p>
+        <p>
+          and inject module on your controler:
+          <code>angular.module('myModule', ['ngOutClick']);</code><br>
+          Now, you can use this directive like following examples.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Examples</h1>
+        <h3>Example with element DIV and content text</h3>
+        <div class="example">
+          <h4>with init method</h4>
+          <h5>code</h5>
+          <pre>
+            &lt;div
+              ng-click="clickOnExample1()"
+              <b>ng-out-click</b>
+              <b>out-click-callback="outClickChangeExampleText1Callback()"</b>
+              <b>out-click-init="changeExampleText1Init()"</b>&gt;
+                Click on me for change the next text: "&#123;&#123; textExample1 &#125;&#125;"
+            &lt;/div&gt;
+          </pre>
+
+          <br>
+          <h5>result</h5>
+          <div
+            ng-click="clickOnExample1()"
+            ng-out-click
+            out-click-callback="outClickChangeExampleText1Callback()"
+            out-click-init="changeExampleText1Init()">
+              Click on me for change the next text: "{{ textExample1 }}"
+          </div>
+        </div>
+
+
+        <div class="example">
+          <h4>without init method</h4>
+          <h5>code</h5>
+          <pre>
+            &lt;div
+              ng-click="clickOnExample2()"
+              <b>ng-out-click</b>
+              <b>out-click-callback="outClickChangeExampleText2Callback()"</b>&gt;
+                Click on me for change the next text: "{{ textExample2 }}"
+            &lt;/div&gt;
+          </pre>
+
+          <h5>result</h5>
+          <div
+            ng-click="clickOnExample2()"
+            ng-out-click
+            out-click-callback="outClickChangeExampleText2Callback()">
+              Click on me for change the next text: "{{ textExample2 }}"
+          </div>
+        </div>
+
+        <h3>Example with Dropdown</h3>
+        <div class="example">
+          <h5>code</h5>
+          <pre>
+            &lt;div ng-click="toggleEdit()" ng-if="showText"&gt;Click to edit with dropdown. Current option selected:
+              &lt;strong&gt;"{{ currentOption.value }}"&lt;/strong&gt;
+            &lt;/div&gt;
+            &lt;div class="btn-group" dropdown is-open="status.isopen" ng-if="!showText"&gt;
+              &lt;button
+                class="btn btn-primary dropdown-toggle"
+                dropdown-toggle ng-disabled="disabled"
+                <b>ng-out-click</b>
+                <b>out-click-callback="toggleEdit()"</b>
+                <b>out-click-init-count="true"</b>
+                type="button"&gt;
+                  Button dropdown
+                &lt;span class="caret"&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;ul class="dropdown-menu" role="menu"&gt;
+                &lt;li ng-click="selectOption(option)" ng-repeat="option in options"&gt;
+                  {{ option.value }}
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          </pre>
+          <h5>result</h5>
+
+          <div ng-click="toggleEdit()" ng-if="showText">Click to edit with dropdown. Current option selected:
+            <strong>"{{ currentOption.value }}"</strong>
+          </div>
+          <div class="btn-group" dropdown is-open="status.isopen" ng-if="!showText">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              dropdown-toggle ng-disabled="disabled"
+              ng-out-click out-click-callback="toggleEdit()"
+              out-click-init-count="true"
+              type="button">
+                Button dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li ng-click="selectOption(option)" ng-repeat="option in options">
+                {{option.value}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

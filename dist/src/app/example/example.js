@@ -1,11 +1,11 @@
 (function(module) {
   module.config(function config($stateProvider) {
-    $stateProvider.state('home', {
-      url: '/home',
+    $stateProvider.state('example', {
+      url: '/example',
       views: {
         "main": {
-          controller: 'HomeCtrl',
-          templateUrl: 'home/home.tpl.html'
+          controller: 'ExampleCtrl',
+          templateUrl: 'example/example.tpl.html'
         }
       },
       data: {
@@ -14,7 +14,10 @@
     });
   });
 
-  module.controller('HomeCtrl', function($scope, $log) {
+  module.controller('ExampleCtrl', function($scope, $log) {
+    /*
+    * Examples
+    */
     // Dropdown ---------------------------------------------------
     $scope.showText = true;
     $scope.options = [{
@@ -33,32 +36,7 @@
     $scope.selectOption = function(option) {
       $scope.currentOption = option;
     };
-
-    // Example text on div element
-    $scope.textExample1 = 'DEFAULT TEXT EXAMPLE 1';
-    $scope.textExample2 = 'DEFAULT TEXT EXAMPLE 2';
-    $scope.clickOnExample1 = function() {
-      $scope.textExample1 = 'CLICK ON EXAMPLE 1';
-    };
-
-    $scope.outClickChangeExampleText1Callback = function() {
-      $scope.textExample1 = 'OUTSIDE CLICK ON EXAMPLE 1';
-    };
-
-    $scope.changeExampleText1Init = function() {
-      $scope.textExample1 = 'OVERRIDE BY INIT ON EXAMPLE 1';
-    };
-
-    // Example 2
-    $scope.clickOnExample2 = function() {
-      $scope.textExample2 = 'CLICK ON EXAMPLE 2';
-    };
-
-    $scope.outClickChangeExampleText2Callback = function() {
-      $scope.textExample2 = 'OUTSIDE CLICK ON EXAMPLE 2';
-    };
-
-    // Dropdown events
+    // events
     $scope.status = {
       isopen: false
     };
@@ -72,8 +50,34 @@
       $event.stopPropagation();
       $scope.status.isopen = !$scope.status.isopen;
     };
+
+    // Example text on div element
+    $scope.textExample1 = 'DEFAULT TEXT EXAMPLE 1';
+    $scope.clickOnExample1 = function() {
+      $scope.textExample1 = 'CLICK ON EXAMPLE 1';
+    };
+
+    $scope.outClickChangeExampleText1Callback = function() {
+      $scope.textExample1 = 'OUTSIDE CLICK ON EXAMPLE 1';
+    };
+
+    $scope.changeExampleText1Init = function() {
+      $scope.textExample1 = 'OVERRIDE BY INIT ON EXAMPLE 1';
+    };
+
+    // Example 2
+    $scope.textExample2 = 'DEFAULT TEXT EXAMPLE 2';
+    $scope.clickOnExample2 = function() {
+      $scope.textExample2 = 'CLICK ON EXAMPLE 2';
+    };
+
+    $scope.outClickChangeExampleText2Callback = function() {
+      $scope.textExample2 = 'OUTSIDE CLICK ON EXAMPLE 2';
+    };
+
   });
-}(angular.module('ngOutClick.home', [
+}(angular.module('example.ngOutClick.example', [
   'ui.router',
-  'outClick'
+  'ngOutClick',
+  'ui.bootstrap'
 ])));

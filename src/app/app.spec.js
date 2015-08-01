@@ -2,7 +2,7 @@ describe( 'AppCtrl', function() {
   describe( 'isCurrentUrl', function() {
     var AppCtrl, $location, $scope, $state;
 
-    beforeEach( module( 'ngOutClick' ) );
+    beforeEach( module( 'example.ngOutClick' ) );
 
     beforeEach( inject( function( $controller, _$location_, $rootScope, _$state_ ) {
       $location = _$location_;

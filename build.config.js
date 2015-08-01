@@ -59,17 +59,16 @@ module.exports = {
   vendor_files: {
     js: [
       'vendor/angular/angular.js',
-      'vendor/angular-bootstrap/angular-bootstrap.js',
-      'vendor/angular-bootstrap/angular-bootstrap-tpls.js',
-      'vendor/angular-ui-router/release/angular-ui-router.js'
+      'vendor/angular-ui-router/release/angular-ui-router.js',
+      'vendor/angular-bootstrap/ui-bootstrap.js',
+      'vendor/angular-bootstrap/ui-bootstrap-tpls.js'
+      // 'vendor/bootstrap/dist/js/bootstrap.js',
     ],
-    css: [
-      'vendor/bootstrap/dist/css/bootstrap.min.css',
-      'vendor/bootstrap/dist/css/bootstrap-theme.min.css'
-    ],
+    css: [],
     assets: [
     ],
     sass: [
+      'vendor/bootstrap-sass-official/assets/stylesheet/bootstrap/'
     ]
   },
 };

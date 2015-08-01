@@ -1,6 +1,6 @@
 (function(module) {
     'use strict';
-    module.directive("outClick", function() {
+    module.directive("ngOutClick", function() {
         return {
             restrict: 'AE',
             scope: {
@@ -37,4 +37,4 @@
             }
         };
     });
-}(angular.module('outClick', [])));
+}(angular.module('ngOutClick', [])));

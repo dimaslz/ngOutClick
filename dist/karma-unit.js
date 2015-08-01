@@ -21,6 +21,8 @@ module.exports = function ( karma ) {
     files: [
     'vendor/angular/angular.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
+      'vendor/angular-bootstrap/ui-bootstrap.js',
+      'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
       'dist/templates-app.js',
       'dist/templates-components.js',
       'vendor/angular-mocks/angular-mocks.js',
