@@ -1,6 +1,24 @@
 {
   "name": "ng-out-click",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "authors": [
+    "Dimas López Zurita <dimaslopezzurita@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "src/**/*",
+    "karma",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dimaslz/ngOutClick.git"
+  },
+  "description": "Angular component for enjoy onBlur property for any html element",
+  "main": [
+    "dist/outClick/outClick.js"
+  ],
+  "keywords": ["angular", "component", "outclick", "onblur", "directive"],
   "devDependencies": {
     "angular": "~1.2.x",
     "angular-mocks": "~1.2.x",
